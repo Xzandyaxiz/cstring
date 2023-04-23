@@ -5,12 +5,14 @@ typedef struct {
   unsigned long size;
   unsigned long capacity;
   char *data;
-} String;
+} CString;
 
-extern String *String_Init();
+#define string_of(str) ((str->data != NULL) ? str->data : "Null")
 
-extern int String_Push(String *__s, char *__value);
+extern CString *String_Init();
 
-extern void String_Destroy(String *__s);
+extern int String_Push(CString *__s, char *__value);
+
+extern void String_Destroy(CString *__s);
 
 #endif

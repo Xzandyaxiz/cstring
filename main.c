@@ -3,11 +3,11 @@
 #include <stdio.h>
 
 int main(void) {
-  String *my_string = String_Init();
+  CString *my_string = String_Init();
 
-  String_Push(my_string, "This is a longer string, should be fine...right?");
+  String_Push(my_string, "sdsd");
 
-  printf("%s\n", my_string->data);
+  printf("%s\n", string_of(my_string));
 
   String_Destroy(my_string);
 }
