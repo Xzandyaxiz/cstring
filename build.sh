@@ -1,0 +1,1 @@
+gcc main.c lib/cstring.c -o build/main
