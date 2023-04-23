@@ -40,7 +40,11 @@ extern int String_Push(CString *__s, char *__value) {
 
   else {
     __s->capacity *= 3;
-    char *new_data = realloc(__s->data, sizeof(char) * __s->capacity);
+    
+    ASSERT(
+      realloc(__s->data, sizeof(char) * __s->capacity),
+      "Could not resize string"
+    )
 
     String_Resize(__s);
     String_Push(__s, __value);
