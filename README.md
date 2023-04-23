@@ -1,5 +1,5 @@
 # CString
-CString is a C library that features an easy to use string type in C.
+CString is a C library that features an easy to use string type.
 
 ## Installation
 On a linux based system, you could either clone the repository and run `install.sh` or do the following:
