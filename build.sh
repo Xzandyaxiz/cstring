@@ -1,1 +1,1 @@
-gcc main.c -o build/main -lcstring
+gcc main.c lib/cstring.c -o build/main

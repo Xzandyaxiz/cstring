@@ -1,4 +1,4 @@
-#include "cstring.h"
+#include <cstring.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -34,6 +34,9 @@ extern int String_Push(CString *__s, char *__value) {
   if (__s->size + (strlen(__value) + 1) < __s->capacity) { 
     strcat(__s->data, __value),
     __s->size += strlen(__value) + 1;
+
+    __s->capacity = __s->size;
+    String_Resize(__s);
 
     return EXIT_SUCCESS;
   }
